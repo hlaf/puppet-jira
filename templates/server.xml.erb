@@ -79,6 +79,8 @@
                     <%- end -%>
                     maxHttpHeaderSize="<%= @tomcat_max_http_header_size %>"
                     SSLEnabled="true"
+                    relaxedPathChars="[]|"
+                    relaxedQueryChars="[]|{}^&#x5c;&#x60;&quot;&lt;&gt;"
                     maxThreads="<%= @tomcat_max_threads %>"
                     minSpareThreads="<%= @tomcat_min_spare_threads %>"
                     enableLookups="<%= @tomcat_enable_lookups %>"
