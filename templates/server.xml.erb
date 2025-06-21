@@ -52,6 +52,8 @@
                    maxThreads="<%= @tomcat_max_threads %>"
                    minSpareThreads="<%= @tomcat_min_spare_threads %>"
                    connectionTimeout="<%= @tomcat_connection_timeout %>"
+                   relaxedPathChars="[]|"
+                   relaxedQueryChars="[]|{}^&#x5c;&#x60;&quot;&lt;&gt;"
                    enableLookups="<%= @tomcat_enable_lookups %>"
                    maxHttpHeaderSize="<%= @tomcat_max_http_header_size %>"
                    protocol="<%= @tomcat_protocol %>"
