@@ -93,7 +93,7 @@ class jira (
   $jvm_permgen   = '256m',
   $jvm_optional  = '-XX:-HeapDumpOnOutOfMemoryError',
   # Java 11 GC/unified logging flags (can be overridden via Hiera)
-  $jvm_gc_args   = '-Xlog:gc+age=debug:file=${JIRA_HOME}/logs/gc.log::filecount=5,filesize=2M',
+  $jvm_gc_args   = '-Xlog:gc*:file=$CATALINA_BASE/logs/gc-%t.log:tags,time,uptime,level:filecount=7,filesize=20m',
   # Any additional custom JVM flags
   $jvm_extra_args = '',
   $java_opts     = '',
